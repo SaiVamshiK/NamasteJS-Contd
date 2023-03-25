@@ -7,7 +7,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact"
 import RestaurantMenu from "./components/RestaurantMenu";
-import Profile from "./components/Profile"
+import ProfileClass from "./components/ProfileClass";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 
 const AppLayout = () => {
@@ -38,7 +38,7 @@ const appRouter = createBrowserRouter([
         children : [
           {
             path: 'profile',
-            element: <Profile/>
+            element: <ProfileClass/>
           }
         ]
       },

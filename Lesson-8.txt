@@ -2,3 +2,6 @@ Class Based Components:
 Earlier react has started with class based components.
 Always while specifying the routes inside createBrowserRouter function do not use '/', since it takes the path as localhost:8908/...
 While nesting of various paths just use the name of the paths.
+=========================================
+We cannot create a class based component without a render() method.
+The render() method returns some JSX.
