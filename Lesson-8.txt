@@ -1,0 +1,2 @@
+Class Based Components:
+Earlier react has started with class based components.
