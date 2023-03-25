@@ -11,6 +11,14 @@ class ProfileClass extends React.Component {
         };
         console.log('Class Constructor called');
     }
+
+    componentDidMount(){
+        // this function is called after render()
+        console.log('Component Did Mount');
+        // The constructor -> render ->componentDidMount : these are lifecycle methods of a react class based component.
+        // This is the best place to make API call.
+    }
+
     render() {
         console.log('Class Render called')
         return (

@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Profile = (props) => {
 
     let [count,setCount] = useState(0);
 
+    useEffect(() => {
+        console.log('use effect');
+    },[]);
+    console.log('Render');
+    // First the render is printed then use effect is printed.
     console.log(props.name);
     return (
         <div>
