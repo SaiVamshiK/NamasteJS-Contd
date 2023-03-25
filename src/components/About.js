@@ -7,8 +7,8 @@ const About = () => {
         <React.Fragment>
             <h1>About Us Page</h1>
             <p>This is the Namaste React live course</p>
-            <Profile/>
-            <ProfileClass/>
+            <Profile name={"Vamshi"}/>
+            <ProfileClass name={"Vamshi Class"}/>
         </React.Fragment>
     );
 };
