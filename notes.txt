@@ -50,7 +50,8 @@ Use formik while building forms.
 ==============================================
 React Router DOM: 
 npm install react-router-dom
-
+==============================================
+Problem with anchor tag is that when we click the tag it refreshes the whole page. It is a bad thing.
 
 
 

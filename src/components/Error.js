@@ -5,10 +5,12 @@ import { useRouteError } from "react-router";
 const Error = () => {
     const error = useRouteError();
     console.log(error);
+    const {status,statusText} = error;
     return (
         <div>
             <h1>Oops!!</h1>  
             <h2>Something went wrong!</h2>  
+            <h2>{status} : {statusText}</h2>
         </div>
     );
 };
