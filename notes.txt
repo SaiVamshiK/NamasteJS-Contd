@@ -58,8 +58,9 @@ Two types of routing:
 1. Client side : Like react where we do not need to make a call to server to go to a particular page as all the components are already there. (No network call made, no reloading of page.)
 2. Server side : This is where we make a server call (refresh of page happens) and we load the page.
 Using anchor tag make the page to reload. In order to avoid reload of pages avoid the use of anchor tag.
-
-
+IMP NOTE:
+Go to the browser code, you will see the anchor tag instead of Link tag.
+All the childrens go into the outlet.
 
 
 
