@@ -1,0 +1,56 @@
+When we refresh a page, 2 things happen :
+1. Parsing of HTML.
+2. Loading the script tags. This step has 2 parts : 
+					a: fetching the script and 
+					b: executing the script line by line.
+
+Scenario 1:
+<script src = "">
+In this case the browser stops parsing the HTML once it sees the script tag. It fetches the script tag from external source and then executes it. After that it continues the parsing of the remaining HTML.
+
+Scenario 2:
+<script src = "" async>
+Once the browser sees an async tag it asynchronously fetches the script tag along with the HTML parsing. Once the script is available, the browser stops the HTML parsing and executes the script tag. Once it is done the HTML parsing continues. 
+
+Scenario 3:
+<script src = "" defer>
+Once the browser sees a defer tag it will asyncronously fetch the script tags from the source along with HTML parsing. Once the entire HTML parsing is done only then the script tags are executed.
+
+When to use what :
+Using async does not guarantee the order of execution of scripts, so if the script tags are dependent on each other we do not want to use async tags. Defer maintains the order of execution of scripts.
+==============================================
+If our browser does not understand any part of the code, to make it compatible it is converted into the code that is compatible with the browser to understand and execute.
+THIS CONVERSION IS DONE BY BABEL. The converted older code is called POLYFILL.
+Babel uses browserslist in order to know on which browsers our application HAS to run on.
+Babel is just a JS library which just convertes our newer code into an older version of code that can be understood by browser.
+JSX->React Element->HTML is done by babel.
+==============================================
+Implementing React.Fragment type of custom component:
+import * as Obj from '/Header.js';
+<Obj.Title/> is how we use it.
+==============================================
+Whenever a state variable in a component gets changes whole component is re rendered.
+Never make an API call inside a component, since the API call gets executed each time the component is re rendered, i.e. whenever there is a change in state variables.
+Page Loads => render default page => API call => render updated Page. : this is a better approach.
+==============================================
+data?.data?.cards[2] = use optional chaining to prevent null pointer exception
+==============================================
+First the entire body component is re rendered only after that the corresponding useEffect's callback functions are called.
+==============================================
+
+React Router DOM: 
+npm install react-router-dom
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
