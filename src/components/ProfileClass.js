@@ -9,8 +9,10 @@ class ProfileClass extends React.Component {
             count1 : 0,
             count2 : 0
         };
+        console.log('Class Constructor called');
     }
     render() {
+        console.log('Class Render called')
         return (
             <>
                 <h1>Profile Class Component</h1>

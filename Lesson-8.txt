@@ -5,3 +5,5 @@ While nesting of various paths just use the name of the paths.
 =========================================
 We cannot create a class based component without a render() method.
 The render() method returns some JSX.
+Content inside the constructor is only executed once - during the initial render.
+Content inside the render method is executed once during initial render and each time the state variables change.
