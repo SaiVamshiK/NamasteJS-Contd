@@ -20,13 +20,10 @@ const Body = () => {
   }
 
   useEffect(() => {
-    console.log('Use Effect 1 called');
     getAllRestaurants();
   }, []);
 
  
-
-  console.log("body render");
   if (allRestaurants.length === 0) {
     return (
       <>

@@ -37,10 +37,19 @@ data?.data?.cards[2] = use optional chaining to prevent null pointer exception
 ==============================================
 First the entire body component is re rendered only after that the corresponding useEffect's callback functions are called.
 ==============================================
-
+If we do not give any dependency array in 2nd parameter, then the callback function gets called AFTER each time the component renders.
+==============================================
+IMP Points:
+Never create a component inside another component. Because inner component gets created each time after the outer component re renders.
+Never use useState() inside if else or for loop. 
+useState() is a hook to create LOCAL STATE VARIABLE inside functional component.
+Never use useState() outside the components.
+==============================================
+CDN is a greater place to store and retrieve images. Because it is fast.
+Use formik while building forms.
+==============================================
 React Router DOM: 
 npm install react-router-dom
-
 
 
 
