@@ -17,6 +17,11 @@ class ProfileClass extends React.Component {
                 <h2>Name : {this.props.name}</h2>
                 <h2>Count1: {this.state.count1}</h2>
                 <h2>Count2: {this.state.count2}</h2>
+                <button onClick={() => {
+                    this.setState({
+                        count1 : 10
+                    })
+                }}>Change count</button>
             </>
         );
     }

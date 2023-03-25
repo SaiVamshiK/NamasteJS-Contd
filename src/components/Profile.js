@@ -9,6 +9,9 @@ const Profile = (props) => {
         <div>
             <h2>Profile Component</h2>
             <h2>Count: {count}</h2>
+            <button onClick={() => {
+                setCount(10)
+            }}>Change count</button>
         </div>
     );
 }
