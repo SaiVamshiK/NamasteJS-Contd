@@ -1,12 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import Profile from './Profile';
+import ProfileClass from "./ProfileClass";
 
 const About = () => {
     return (
         <React.Fragment>
             <h1>About Us Page</h1>
             <p>This is the Namaste React live course</p>
-            <Outlet/>
+            <Profile/>
+            <ProfileClass/>
         </React.Fragment>
     );
 };
