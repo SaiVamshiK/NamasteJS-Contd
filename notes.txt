@@ -51,7 +51,31 @@ Use formik while building forms.
 React Router DOM: 
 npm install react-router-dom
 ==============================================
-Problem with anchor tag is that when we click the tag it refreshes the whole page. It is a bad thing.
+Problem with anchor tag is that when we click the tag it refreshes the whole page. It is a bad thing. 
+React is a SPA.
+==============================================
+Two types of routing:
+1. Client side : Like react where we do not need to make a call to server to go to a particular page as all the components are already there. (No network call made, no reloading of page.)
+2. Server side : This is where we make a server call (refresh of page happens) and we load the page.
+Using anchor tag make the page to reload. In order to avoid reload of pages avoid the use of anchor tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
