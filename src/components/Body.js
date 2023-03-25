@@ -64,9 +64,9 @@ const Body = () => {
           </button>
           <h1>{appName}</h1>
         </div>
-        {filteredList.length !== 0 ? (
+        {filteredList?.length !== 0 ? (
           <div className="restaurant-list">
-            {filteredList.map((restaurant, index) => (
+            {filteredList?.map((restaurant, index) => (
               <RestaurantCard restaurant={restaurant} key={index} />
             ))}
           </div>
