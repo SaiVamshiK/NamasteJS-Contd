@@ -43,3 +43,6 @@
     margin : 20px;
 
 }
+.menu{
+    display:flex;
+}
