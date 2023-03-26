@@ -11,4 +11,5 @@ Constructor Call->render Call : IMP Flow
 =========================================
 We can make the componentDidMount() as async,but not the callback function inside the useEffect() hook.
 =========================================
-
+Never compare lifecycle of class component with functional component.
+=========================================

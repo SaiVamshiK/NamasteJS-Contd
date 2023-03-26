@@ -30,6 +30,11 @@ class ProfileClass extends React.Component {
     console.log('Component Update called');
   }
 
+  componentWillUnmount(){
+    console.log('Component Unmount called');
+    // This method is called when we leave the component and go to another component.
+  }
+
   render() {
     console.log("Class Render called " + this.props.name);
     return (
