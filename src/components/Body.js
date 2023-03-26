@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RestaurantCard } from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
+import { filterData } from "../utils/helper";
 
 const Body = () => {
   let [inputValue, setInputValue] = useState("");
@@ -41,12 +42,7 @@ const Body = () => {
             value={inputValue}
             onChange={(e) => {
               setInputValue(e.target.value);
-              let tempFilter = allRestaurants.filter((restaurant) => {
-                if (restaurant.data.name.includes(e.target.value)) {
-                  return true;
-                }
-                return false;
-              });
+              let tempFilter = filterData(e.target.value,allRestaurants);
               setFilteredList(tempFilter);
             }}
           />
