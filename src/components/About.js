@@ -17,7 +17,6 @@ export class About extends React.Component {
         <h1>About Us Page</h1>
         <p>This is the Namaste React live course</p>
         <ProfileClass name={"Vamshi Class 1"} />
-        <ProfileClass name={"Vamshi Class 2"} />
       </React.Fragment>
     );
   }
