@@ -22,6 +22,9 @@ class ProfileClass extends React.Component {
             githubData : json
         }
     );
+    this.timer = setInterval(() => {
+        console.log('Timer called');
+    },1000);
     // The constructor -> render ->componentDidMount : these are lifecycle methods of a react class based component.
     // This is the best place to make API call.
   }
@@ -31,8 +34,11 @@ class ProfileClass extends React.Component {
   }
 
   componentWillUnmount(){
+    clearInterval(this.timer);
     console.log('Component Unmount called');
     // This method is called when we leave the component and go to another component.
+    // If we do not clearInterval() then a new interval keeps on adding to the JS engine each time we go to the about page.
+    // In order to avoid creation of multiple intervals each time we come to the page, we need to clear the interval when we leave the component.
   }
 
   render() {
