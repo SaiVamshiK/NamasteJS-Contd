@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { RestaurantCard } from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
 import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
+
   let [inputValue, setInputValue] = useState("");
   let [allRestaurants, setAllRestaurants] = useState([]);
   let [filteredList, setFilteredList] = useState([]);
@@ -24,6 +26,12 @@ const Body = () => {
     getAllRestaurants();
   }, []);
 
+  let isOnline = useOnline();
+  if(!isOnline){
+    return (
+      <h1>Please check your interet connection...</h1>
+    );
+  }
  
   if (allRestaurants?.length === 0) {
     return (

@@ -13,3 +13,5 @@ We can make the componentDidMount() as async,but not the callback function insid
 =========================================
 Never compare lifecycle of class component with functional component.
 =========================================
+IMP:
+We use custom hooks since we cannot make state variables inside normal function. We cannot use useEffect() inside a normal function.
