@@ -26,6 +26,10 @@ class ProfileClass extends React.Component {
     // This is the best place to make API call.
   }
 
+  componentDidUpdate() {
+    console.log('Component Update called');
+  }
+
   render() {
     console.log("Class Render called " + this.props.name);
     return (
@@ -47,6 +51,21 @@ class ProfileClass extends React.Component {
 // About : Component Did Mount called
 // the result {json}
 // Class Render called Vamshi Class 1 = re render of component since state is changed.
+
+// NOW THE SEQUENCE is:
+// Sequence of methods called:
+// About : Constructor called
+// About : Render called
+// Class Constructor called Vamshi Class 1
+// Class Render called Vamshi Class 1
+// Component Did Mount Vamshi Class 1
+// About : Component Did Mount called
+// the result {json}
+// Class Render called Vamshi Class 1 = re render of component since state is changed.
+// Component Update called : here the componentDidUpdate() lifecycle method is called
+
+// The componentDidUpdate() lifecycle method is called each time the state variables are updated-> render method called -> componentDidUpdate() called.
+// IMP: componentDidMount() is called after 1st render and componentDidUpdate() is called after subsequent renders.
 
 
 export default ProfileClass;
