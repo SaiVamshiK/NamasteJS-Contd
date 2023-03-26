@@ -4,14 +4,14 @@ import ProfileClass from "./ProfileClass";
 export class About extends React.Component {
   constructor(props) {
     super(props);
-    console.log('About : Constructor called');
+    // console.log('About : Constructor called');
   }
   componentDidMount() {
     // Best place to make an API call
-    console.log('About : Component Did Mount called');
+    // console.log('About : Component Did Mount called');
   }
   render() {
-    console.log('About : Render called');
+    // console.log('About : Render called');
     return (
       <React.Fragment>
         <h1>About Us Page</h1>

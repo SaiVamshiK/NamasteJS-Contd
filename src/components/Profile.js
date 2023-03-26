@@ -5,6 +5,7 @@ const Profile = (props) => {
     let [count,setCount] = useState(0);
     let timer;
 
+    /*
     useEffect(() => {
         console.log('use effect');
         timer = setInterval(() => {
@@ -18,8 +19,9 @@ const Profile = (props) => {
         };
     },[]);
     console.log('Render');
+    */
     // First the render is printed then use effect is printed.
-    console.log(props.name);
+    // console.log(props.name);
     return (
         <div>
             <h2>Profile Component</h2>
