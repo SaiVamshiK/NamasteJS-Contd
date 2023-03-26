@@ -12,6 +12,10 @@ const Profile = (props) => {
         },1000);
         // Now each time we come to the profile component a new setInterval is called.
         // Because of this multiple setIntervals are created.
+        return () => {
+            console.log('Clean up code here');
+            clearInterval(timer);
+        };
     },[]);
     console.log('Render');
     // First the render is printed then use effect is printed.
