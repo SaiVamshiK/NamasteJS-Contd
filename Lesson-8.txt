@@ -15,3 +15,15 @@ Never compare lifecycle of class component with functional component.
 =========================================
 IMP:
 We use custom hooks since we cannot make state variables inside normal function. We cannot use useEffect() inside a normal function.
+=========================================
+At the end the basic job of a bundler is to bundle the entire project code into a single JS file.
+Bundling is good to only an extent.
+Large scale production ready apps cannot be created with 1 bundle. So we need to use chucking/ code spliting/ Lazy loading. 
+Suppose we go to makemytrip.com, we see multiple tabs for flight bookings, bus bookings, train bookings.
+So when we are at the flight bookings page it makes sense to load just the components belonging to flights bookings. It does not make sense to load all the components of the entire website.
+So when we are at the flights bookings page, we load that particular bundle.
+When we are at the trains bookings page, we only load that particular bundle.
+This is also called as ON DEMAND LOADING/DYNAMIC IMPORT.
+This optimizes our app.
+=========================================
+
