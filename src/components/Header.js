@@ -18,7 +18,9 @@ const Header = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link to='/cart'>Cart</Link>
+          </li>
           {isLoggedIn ? (
             <>
               <button
