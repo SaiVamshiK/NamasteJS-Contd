@@ -26,4 +26,25 @@ When we are at the trains bookings page, we only load that particular bundle.
 This is also called as ON DEMAND LOADING/DYNAMIC IMPORT.
 This optimizes our app.
 =========================================
+After importing the component using Lazy we have implemented dynamic import. This means when our / URL is loaded, except the Cart Components all the components are bundled into a single file. Once we go to the cart page only then a new bundle file with the Cart component is created and rendered. Now we have 2 bundle files.
+When we load the Cart on the 1st go it gives us the error page, since the bundle for the Cart page is not available in the browser yet. So we see the Error page being rendered. On subsequent loading of the Cart component we see the actual Cart page since we have the Cart page ready in the browser to render.
+=========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

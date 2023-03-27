@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React, { Children, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,8 +8,9 @@ import Error from "./components/Error";
 import Contact from "./components/Contact"
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
-import Cart from "./components/Cart";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
+
+const Cart = lazy(() => import('./components/Cart'));
 
 const AppLayout = () => {
   return (
