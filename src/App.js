@@ -1,4 +1,4 @@
-import React, { Children, lazy } from "react";
+import React, { Children, lazy,Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,6 +9,7 @@ import Contact from "./components/Contact"
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
+import ShimmerUI from "./components/ShimmerUI";
 
 const Cart = lazy(() => import('./components/Cart'));
 
@@ -55,11 +56,13 @@ const appRouter = createBrowserRouter([
       },
       {
         path: 'cart',
-        element : <Cart />
+        element : <Suspense fallback={<ShimmerUI/>}><Cart /></Suspense>
       }
     ],
   },
 ]);
+// In order to avoid the error we wrap the Component we need to render inside Suspense.
+// the fallback prop inside it will be rendered until the lazy loaded component is loaded.
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
