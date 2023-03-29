@@ -106,8 +106,13 @@ Props Drilling is not a good way to pass props from one component to another com
 It makes our components to have a lot of unused props.
 ==============================================
 Building a collapsable accordian:
-
-
+==============================================
+Profiler tells what happened in the website.
+==============================================
+If we want to access a JS object across all components we need to maintain a storage for all components.
+The storages are React Context or Redux.
+Why use React Context to store global variable, why not just use normal JS variables?
+Ans. This question is same as why use state variables. In order for React to keep track of what is happening we need to use it.
 
 
 
