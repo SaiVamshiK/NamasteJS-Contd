@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import ProfileClass from "./ProfileClass";
+import UserContext from "../utils/UserContext";
 export class About extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,9 @@ export class About extends React.Component {
         <h1>About Us Page</h1>
         <p>This is the Namaste React live course</p>
         <Profile name={"Vamshi Class 1"} />
+        <UserContext.Consumer>{({user}) => {
+          <h2 className="font-bold text-xl pl-10">{user.name}bh</h2>
+        }}</UserContext.Consumer>
       </React.Fragment>
     );
   }
@@ -58,7 +62,6 @@ Now the Commit phase begins:
 Parent component did mount
 
 */
-
 
 // Sequence of steps
 // About.js:7 About : Constructor called - About Component lifecycle

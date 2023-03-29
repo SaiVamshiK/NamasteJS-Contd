@@ -115,7 +115,7 @@ Why use React Context to store global variable, why not just use normal JS varia
 Ans. This question is same as why use state variables. In order for React to keep track of what is happening we need to use it.
 
 User Context is decoupled from all components.
-
+Context is like useState for whole application.
 
 
 
