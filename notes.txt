@@ -84,7 +84,8 @@ configure index.css
 
 postcss is used for compilation of the CSS.
 .postcssrc : This file tells parcel that at the time of build, we need to build tailwind as well into our project.
-
+==============================================
+Installing Tailwind CSS IntelliSense extension
 
 
 

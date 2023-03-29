@@ -42,10 +42,10 @@ const Body = () => {
   } else {
     return (
       <>
-        <div className="search-container">
+        <div className="p-5 bg-color-50 m-2">
           <input
             type="text"
-            className="search-input"
+            className="p-2 m-2 rounded-lg"
             placeholder="Search"
             value={inputValue}
             onChange={(e) => {
@@ -55,7 +55,7 @@ const Body = () => {
             }}
           />
           <button
-            className="search-btn"
+            className="p-2 m-2 bg-purple-50 rounded-lg"
             onClick={() => {
               if (appName === "Food Villa Restaurants") {
                 setAppName("Food Villa updated Restaurants");

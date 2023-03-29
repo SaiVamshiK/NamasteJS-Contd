@@ -5,20 +5,20 @@ import { Link } from "react-router-dom";
 const Header = () => {
   let [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 shadow-lg">
       <Title />
       <div className="nav-items">
-        <ul>
-          <li>
+        <ul className="flex py-10 ">
+          <li className="px-2">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link to='/cart'>Cart</Link>
           </li>
           {isLoggedIn ? (
