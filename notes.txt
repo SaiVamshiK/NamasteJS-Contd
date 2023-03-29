@@ -64,8 +64,17 @@ All the childrens go into the outlet.
 ==============================================
 Inline CSS is hard for browser to process. Writing CSS in another file is beterr than this.
 Material UI is a library. It has a lot of prebuilt components that is already styled.
+Tailwind is an open source CSS framework.
+Tailwind says write CSS on the go.
+Tailwind comes with a lot of prebuilt class.
+Tailwind provides reusability.
+Tailwind uses lesser bundle file.
+Has a flexible UI (customizable).
+Tailwind CSS changes the way our tags are already looking.
 
-
+Configuring Tailwind CSS :
+1. Use CDN links
+2. 
 
 
 
