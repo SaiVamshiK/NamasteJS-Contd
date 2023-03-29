@@ -98,6 +98,9 @@ Customizable.
 
 Cons of Tailwind:
 Lot of classes.
+==============================================
+State is the local variable that is used by the component.
+Prop is the argument that is passed from one component to another component.
 
 
 

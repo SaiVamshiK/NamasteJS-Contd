@@ -15,18 +15,17 @@ const RestaurantMenu = () => {
     return <ShimmerUI/>
   } else {
     return (
-      <div className="menu">
-        <div>
-          <h1>Restraunt id: {id}</h1>
-          <h2>{restaurant?.name}</h2>
+      <div>
+        <div className="w-[200px] p-2 m-2 shadow-lg">
+          <h2 className="font-bold text-xl">{restaurant?.name}</h2>
           <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
           <h3>{restaurant?.area}</h3>
           <h3>{restaurant?.city}</h3>
           <h3>{restaurant?.avgRating} stars</h3>
           <h3>{restaurant?.costForTwoMsg}</h3>
         </div>
-        <div>
-          <h1>Menu</h1>
+        <div className="m-5 p-5 shadow-lg bg-pink-50">
+          <h1 className="font-bold">Menu</h1>
           <ul>
             {menu?.itemCards?.map((item, x) => (
               <li key={x}>{item.card.info.name}</li>
