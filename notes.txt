@@ -70,12 +70,20 @@ Tailwind comes with a lot of prebuilt class.
 Tailwind provides reusability.
 Tailwind uses lesser bundle file.
 Has a flexible UI (customizable).
-Tailwind CSS changes the way our tags are already looking.
+Tailwind CSS changes the way our tags are already looking. Default CSS is removed.
+Everything in tailwind works with class names.
 
 Configuring Tailwind CSS :
 1. Use CDN links
-2. 
+2. Or Install the library (better way)
 
+npm install -D tailwindcss postcss : to install tailwind.
+npx tailwindcss init - creates the config file. (tell tailwind what files uses tailwind)
+create .postcssrc file
+configure index.css
+
+postcss is used for compilation of the CSS.
+.postcssrc : This file tells parcel that at the time of build, we need to build tailwind as well into our project.
 
 
 
