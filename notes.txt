@@ -90,6 +90,14 @@ Installing Tailwind CSS IntelliSense extension
 Tailwind CSS compiles the CSS file with only the classes we have used in our project and ship it to production.
 Try to use what tailwind offers by default, this is because the index.css file which tailwind creates while building the project would be smaller.
 
+Pros of Tailwind:
+Less code is shiped to production.
+No duplicate CSS.
+Bundle size is small.
+Customizable.
+
+Cons of Tailwind:
+Lot of classes.
 
 
 
