@@ -40,9 +40,6 @@ const Body = () => {
       </>
     );
   } else {
-    const styleBtn = {
-      "backgroundColor" : "lightblue"
-    };
     return (
       <>
         <div className="search-container">
@@ -59,7 +56,6 @@ const Body = () => {
           />
           <button
             className="search-btn"
-            style={styleBtn}
             onClick={() => {
               if (appName === "Food Villa Restaurants") {
                 setAppName("Food Villa updated Restaurants");
