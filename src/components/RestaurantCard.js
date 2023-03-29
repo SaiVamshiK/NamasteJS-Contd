@@ -1,7 +1,7 @@
 import { IMG_CDN_URL } from "../config";
 import { Link } from "react-router-dom";
 
-export const RestaurantCard = ({ restaurant }) => {
+export const RestaurantCard = ({ restaurant,user }) => {
   let IMG_URL = IMG_CDN_URL + restaurant?.data?.cloudinaryImageId;
   let REST_URL = '/restaurant/' + restaurant.data.id; 
   return (
@@ -12,6 +12,8 @@ export const RestaurantCard = ({ restaurant }) => {
       </h2>
       <h3>{restaurant?.data?.cuisines.join(", ")}</h3>
       <h4>{restaurant?.data?.avgRating} stars</h4>
+      <h5>{user.name}</h5>
+      {/* App.js->Body.js->RestaurantCard.js - Props Drilling */}
     </div>
   );
 };
