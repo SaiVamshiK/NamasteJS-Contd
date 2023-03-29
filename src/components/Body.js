@@ -45,7 +45,7 @@ const Body = () => {
         <div className="p-5 bg-color-50 m-2">
           <input
             type="text"
-            className="p-2 m-2 rounded-lg"
+            className="p-2 m-2 rounded-lg focus:bg-green-50"
             placeholder="Search"
             value={inputValue}
             onChange={(e) => {
@@ -55,7 +55,7 @@ const Body = () => {
             }}
           />
           <button
-            className="p-2 m-2 bg-purple-50 rounded-lg"
+            className="p-2 m-2 bg-pink-50 rounded-lg hover:bg-green-50"
             onClick={() => {
               if (appName === "Food Villa Restaurants") {
                 setAppName("Food Villa updated Restaurants");
@@ -69,7 +69,7 @@ const Body = () => {
           <h1>{appName}</h1>
         </div>
         {filteredList?.length !== 0 ? (
-          <div className="restaurant-list">
+          <div className="flex flex-wrap">
             {filteredList?.map((restaurant, index) => (
               <RestaurantCard restaurant={restaurant} key={index} />
             ))}

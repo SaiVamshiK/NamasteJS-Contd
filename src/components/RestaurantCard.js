@@ -5,9 +5,9 @@ export const RestaurantCard = ({ restaurant }) => {
   let IMG_URL = IMG_CDN_URL + restaurant?.data?.cloudinaryImageId;
   let REST_URL = '/restaurant/' + restaurant.data.id; 
   return (
-    <div className="card">
+    <div className="w-[200px] p-2 m-2 shadow-lg">
       <img src={IMG_URL} />
-      <h2>
+      <h2 className="font-bold text-xl">
         <Link to={REST_URL}>{restaurant?.data?.name}</Link>
       </h2>
       <h3>{restaurant?.data?.cuisines.join(", ")}</h3>
@@ -15,3 +15,5 @@ export const RestaurantCard = ({ restaurant }) => {
     </div>
   );
 };
+// [200px] keeps the size dynamic - customizable
+// 
