@@ -4,7 +4,7 @@ import ShimmerUI from "./ShimmerUI";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 
-const Body = ({user}) => {
+const Body = ({}) => {
 
   let [inputValue, setInputValue] = useState("");
   let [allRestaurants, setAllRestaurants] = useState([]);
@@ -71,7 +71,7 @@ const Body = ({user}) => {
         {filteredList?.length !== 0 ? (
           <div className="flex flex-wrap">
             {filteredList?.map((restaurant, index) => (
-              <RestaurantCard restaurant={restaurant} user = {user} key={index} />
+              <RestaurantCard restaurant={restaurant} key={index} />
             ))}
           </div>
         ) : (

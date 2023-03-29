@@ -114,6 +114,8 @@ The storages are React Context or Redux.
 Why use React Context to store global variable, why not just use normal JS variables?
 Ans. This question is same as why use state variables. In order for React to keep track of what is happening we need to use it.
 
+User Context is decoupled from all components.
+
 
 
 

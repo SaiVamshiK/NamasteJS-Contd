@@ -1,7 +1,10 @@
 import { IMG_CDN_URL } from "../config";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
-export const RestaurantCard = ({ restaurant,user }) => {
+export const RestaurantCard = ({ restaurant }) => {
+  let {user} = useContext(UserContext);
   let IMG_URL = IMG_CDN_URL + restaurant?.data?.cloudinaryImageId;
   let REST_URL = '/restaurant/' + restaurant.data.id; 
   return (
