@@ -19,7 +19,9 @@ export class About extends React.Component {
         <p>This is the Namaste React live course</p>
         <Profile name={"Vamshi Class 1"} />
         <UserContext.Consumer>{({user}) => {
-          <h2 className="font-bold text-xl pl-10">{user.name}bh</h2>
+          return (
+            <h2 className="font-bold text-xl pl-10">{user.name}</h2>
+          )
         }}</UserContext.Consumer>
       </React.Fragment>
     );
