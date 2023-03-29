@@ -101,7 +101,7 @@ Lot of classes.
 ==============================================
 State is the local variable that is used by the component.
 Prop is the argument that is passed from one component to another component.
-
+Props Drilling is not a good way to pass props from one component to another component.
 
 
 
