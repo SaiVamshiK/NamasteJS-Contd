@@ -116,9 +116,8 @@ Ans. This question is same as why use state variables. In order for React to kee
 
 User Context is decoupled from all components.
 Context is like useState for whole application.
-
-
-
+==============================================
+We can modify the UserContext using a Provider.
 
 
 

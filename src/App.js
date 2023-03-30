@@ -1,25 +1,31 @@
-import React, { Children, lazy,Suspense } from "react";
+import React, { Children, lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Error from "./components/Error";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
-import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ShimmerUI from "./components/ShimmerUI";
+import UserContext from "./utils/UserContext";
 
-const Cart = lazy(() => import('./components/Cart'));
+const Cart = lazy(() => import("./components/Cart"));
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Sai Vamshi",
+    email: "saivamshi.k.24@gmail.com",
+  });
+// wrapping the UserContext.Provider inside the 3 components, because we need the values of the user data across all the components.
   return (
-    <>
+    <UserContext.Provider value={{ user: user }}>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </UserContext.Provider>
   );
 };
 
@@ -31,19 +37,19 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element : <Body />,
-        errorElement : <Error />
+        element: <Body />,
+        errorElement: <Error />,
       },
       {
         path: "about",
         element: <About />,
         errorElement: <Error />,
-        children : [
+        children: [
           {
-            path: 'profile',
-            element: <ProfileClass/>
-          }
-        ]
+            path: "profile",
+            element: <ProfileClass />,
+          },
+        ],
       },
       {
         path: "contact",
@@ -51,13 +57,17 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: 'restaurant/:id',
-        element: <RestaurantMenu />
+        path: "restaurant/:id",
+        element: <RestaurantMenu />,
       },
       {
-        path: 'cart',
-        element : <Suspense fallback={<ShimmerUI/>}><Cart /></Suspense>
-      }
+        path: "cart",
+        element: (
+          <Suspense fallback={<ShimmerUI />}>
+            <Cart />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
