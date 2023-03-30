@@ -22,11 +22,14 @@ const AppLayout = () => {
   // wrapping the UserContext.Provider inside the 3 components, because we need the values of the user data across all the components.
   return (
     <>
-      <UserContext.Provider value={{ user: user }}>
+      <UserContext.Provider value={{ 
+        user: user,
+        setUser : setUser
+       }}>
         <Header />
         <Outlet />
+        <Footer />
       </UserContext.Provider>
-      <Footer />
     </>
   );
 };

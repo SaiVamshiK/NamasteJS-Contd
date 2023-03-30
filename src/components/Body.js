@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { RestaurantCard } from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext";
 
 const Body = ({}) => {
 
+  const {user,setUser} = useContext(UserContext);
   let [inputValue, setInputValue] = useState("");
   let [allRestaurants, setAllRestaurants] = useState([]);
   let [filteredList, setFilteredList] = useState([]);
@@ -65,6 +67,17 @@ const Body = ({}) => {
             }}
           >
             Search
+          </button>
+          <button
+            className="p-2 m-2 bg-pink-50 rounded-lg hover:bg-green-50"
+            onClick={() => {
+              setUser({
+                name : 'kl',
+                email : 'kl.rahul@gmail.com'
+              })
+            }}
+          >
+            Change User Context
           </button>
           <h1>{appName}</h1>
         </div>
