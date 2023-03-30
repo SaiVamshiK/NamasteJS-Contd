@@ -19,13 +19,15 @@ const AppLayout = () => {
     name: "Sai Vamshi",
     email: "saivamshi.k.24@gmail.com",
   });
-// wrapping the UserContext.Provider inside the 3 components, because we need the values of the user data across all the components.
+  // wrapping the UserContext.Provider inside the 3 components, because we need the values of the user data across all the components.
   return (
-    <UserContext.Provider value={{ user: user }}>
-      <Header />
-      <Outlet />
+    <>
+      <UserContext.Provider value={{ user: user }}>
+        <Header />
+        <Outlet />
+      </UserContext.Provider>
       <Footer />
-    </UserContext.Provider>
+    </>
   );
 };
 
