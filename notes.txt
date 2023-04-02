@@ -152,11 +152,14 @@ Why can't we directly modify the store -> Because we do not want random componen
 
 IMP : We click the + button -> It dispatches an action -> It calls the Reducer function that modifies the CART SLICE of the store.
 
+Reading data from the store:
+If we want to read a cart slice then we call the Selector that provides information about the CART SLICE.
+Selector selects the portion of the store.
+Selector at the end of the day is a hook.
 
 
-
-
-
+'+' Clicked -> Dispatch an Action -> Reducer function called to update the slice->
+Slice of store updated -> Selector function called to read the slice -> Cart count updated.
 
 
  
