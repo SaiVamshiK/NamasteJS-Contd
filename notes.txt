@@ -118,6 +118,40 @@ User Context is decoupled from all components.
 Context is like useState for whole application.
 ==============================================
 We can modify the UserContext using a Provider.
+==============================================
+Redux:
+We use it to manage the data layer of the application.
+Context is a central place where all the data is being stored.
+Any component in our app can access and modify the context.
+When app is huge we can use Redux.
+Why Redux -> data management.
+Problem with Redux -> complex to setup.
+Redux toolkit is used to solve the problem of complexity.
+We will use Redux toolkit.
+
+Architecture of Redux Toolkit:
+We are building cart feature for the application.
+Menu page has food items with an add button.
+
+Redux Store:
+At the end of the day it is a huge object.
+The object has several sections.
+All the components are able to access the Redux store.
+Store is not tied to any entity/component.
+Web app and store is different.
+In redux there is a SINGLE store.
+We will create slices/logical separation of our store.
+Our app can have a Cart slice, User slice, Authentication slice.
+Slice is a portion of the Redux store.
+OUR COMPONENTS CANNOT DIRECTLY MODIFY THE STORE.
+WE WILL HAVE TO DISPATCH AN ACTION.
+WHEN WE CLICK ON + BUTTON TO ADD AN ITEM TO THE CART PAGE, WE WILL HAVE TO DISPATCH AN ACTION TO THE CART SLICE. THE DISPATCH ACTION IS "addItem".
+This action will call a JS function, that function will modify the cart. 
+THIS FUNCTION IS CALLED AS REDUCER.
+Why can't we directly modify the store -> Because we do not want random components to modify the store.
+
+IMP : We click the + button -> It dispatches an action -> It calls the Reducer function that modifies the CART SLICE of the store.
+
 
 
 
