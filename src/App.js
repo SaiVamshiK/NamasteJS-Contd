@@ -11,6 +11,9 @@ import ProfileClass from "./components/ProfileClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ShimmerUI from "./components/ShimmerUI";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+// Provider is bridging the react and redux.
+import Store from "./utils/Store";
 
 const Cart = lazy(() => import("./components/Cart"));
 
@@ -21,7 +24,7 @@ const AppLayout = () => {
   });
   // wrapping the UserContext.Provider inside the 3 components, because we need the values of the user data across all the components.
   return (
-    <>
+    <Provider store={Store}>
       <UserContext.Provider value={{ 
         user: user,
         setUser : setUser
@@ -30,7 +33,7 @@ const AppLayout = () => {
         <Outlet />
         <Footer />
       </UserContext.Provider>
-    </>
+    </Provider>
   );
 };
 
