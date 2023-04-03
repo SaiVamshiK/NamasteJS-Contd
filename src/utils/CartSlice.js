@@ -24,4 +24,5 @@ const CartSlice = createSlice({
     }
 });
 // Reducer functions are used to modify the cart slice
-export default CartSlice;
+export const {addItem,removeItem,clearCart} = CartSlice.actions;
+export default CartSlice.reducer;
