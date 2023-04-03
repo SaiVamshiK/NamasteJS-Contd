@@ -26,3 +26,13 @@ const CartSlice = createSlice({
 // Reducer functions are used to modify the cart slice
 export const {addItem,removeItem,clearCart} = CartSlice.actions;
 export default CartSlice.reducer;
+// BTS:
+// CartSlice is an object now:
+// {
+//     actions: {
+//         addItem,
+//         removeItem,
+//         clearCart
+//     },
+//     reducer: 
+// }
