@@ -161,6 +161,26 @@ Selector at the end of the day is a hook.
 '+' Clicked -> Dispatch an Action -> Reducer function called to update the slice->
 Slice of store updated -> Selector function called to read the slice -> Cart count updated.
 
+IMP Point : Cart Component has SUBSCRIBED (uses Selector for subscribing) to the CART SLICE which means whenever the CART SLICE is updated the CART component gets updated.
+
+===================================================
+npm i @reduxjs/toolkit = to install redux toolkit. (core of react)
+npm i react-redux = bridge between redux and react.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
