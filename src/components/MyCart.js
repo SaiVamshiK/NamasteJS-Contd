@@ -14,6 +14,7 @@ const MyCart = () => {
   const clearExistingCart = () => {
     dispatch(clearCart());
   }
+  console.log(cartItems)
 
   return (
     <div>
@@ -25,7 +26,7 @@ const MyCart = () => {
       </div>
       <div className="flex">
         {cartItems.map((item, idx) => (
-          <FoodItem key={idx} {...item?.card?.info} />
+          <FoodItem key={idx} item = {item} index = {idx}/>
         ))}
       </div>
     </div>

@@ -1,14 +1,24 @@
+import { useDispatch } from "react-redux";
 import { IMG_CDN_URL } from "../config";
+import { removeItem } from "../utils/CartSlice";
 
-const FoodItem = ({ name, imageId, description, price }) => {
-    let IMG_URL = IMG_CDN_URL + imageId;
-   return (
+const FoodItem = ({item,index}) => {
+  let IMG_URL = IMG_CDN_URL + item?.card?.info?.imageId;
+  const dispatch = useDispatch();
+
+  const removeCurrentItem = (index) => {
+    dispatch(removeItem(index))
+  };
+
+  return (
     <div>
       <div className="w-[200px] p-2 m-2 shadow-lg">
         <img src={IMG_URL} />
-        <h3>{name}</h3>
-        <h5>Price : {price/100}</h5>
-        {/* App.js->Body.js->RestaurantCard.js - Props Drilling */}
+        <h3>{item?.card?.info?.name}</h3>
+        <div className="flex">
+          <h5>Price : {item?.card?.info?.price / 100}</h5>
+          <button className="p-2 m-2 bg-blue-50" onClick={() => removeCurrentItem(index)}>Remove Item</button>
+        </div>
       </div>
     </div>
   );
