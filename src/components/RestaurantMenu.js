@@ -23,7 +23,7 @@ const RestaurantMenu = () => {
     return <ShimmerUI/>
   } else {
     return (
-      <div>
+      <div className="flex">
         <div className="w-[200px] p-2 m-2 shadow-lg">
           <h2 className="font-bold text-xl">{restaurant?.name}</h2>
           <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
@@ -37,7 +37,7 @@ const RestaurantMenu = () => {
           <ul>
             {menu?.itemCards?.map((item, x) => (
               <div key={x}>
-                <li>{item.card.info.name} <button className="m-5 p-5 shadow-lg bg-green-50" onClick={() => handleAddItem(item.card.info.name)}>Add Item</button></li>
+                <li>{item.card.info.name} <button className="m-5 p-5 shadow-lg bg-green-50" onClick={() => handleAddItem(item)}>Add Item</button></li>
               </div>
             ))}
           </ul>

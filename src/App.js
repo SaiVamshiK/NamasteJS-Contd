@@ -14,6 +14,7 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 // Provider is bridging the react and redux.
 import Store from "./utils/Store";
+import MyCart from "./components/MyCart";
 
 const Cart = lazy(() => import("./components/Cart"));
 
@@ -76,6 +77,13 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: "mycart",
+        element: (
+          <MyCart/>
+        ),
+        errorElement: <Error/>
+      }
     ],
   },
 ]);

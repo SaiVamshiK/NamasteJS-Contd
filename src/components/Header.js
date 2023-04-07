@@ -8,6 +8,7 @@ const Header = () => {
   let [isLoggedIn, setIsLoggedIn] = useState(false);
   const {user} = useContext(UserContext);
   const cartItems = useSelector(store => store.cart.items);
+  console.log(cartItems);
   // subscribing to the cart items
   // We have just subscribed to the Cart Slice's items.
   return (
@@ -25,7 +26,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="px-2">
-            <Link to='/cart'>Cart - {cartItems.length} items</Link>
+            <Link to='/mycart'>Cart - {cartItems.length} items</Link>
           </li>
           {/* <h2 className="font-bold p-2 m-2">{user.name}</h2> */}
           {/* {isLoggedIn ? (
