@@ -8,7 +8,6 @@ const Header = () => {
   let [isLoggedIn, setIsLoggedIn] = useState(false);
   const {user} = useContext(UserContext);
   const cartItems = useSelector(store => store.cart.items);
-  console.log(cartItems);
   // subscribing to the cart items
   // We have just subscribed to the Cart Slice's items.
   return (
