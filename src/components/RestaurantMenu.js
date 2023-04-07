@@ -4,12 +4,20 @@ import { IMG_CDN_URL } from "../config";
 import ShimmerUI from "./ShimmerUI";
 import useRestaurant from "../utils/useRestaurant";
 import useMenu from "../utils/useMenu";
+import { addItem } from "../utils/CartSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
   const params = useParams();
   const { id } = params;
   let restaurant = useRestaurant(id);
   let menu = useMenu(id);
+
+  const dispatch = useDispatch();
+
+  const handleAddItem = () =>{
+    dispatch(addItem('Banana'));
+  }
 
   if (Object.keys(restaurant).length === 0) {
     return <ShimmerUI/>
@@ -23,6 +31,9 @@ const RestaurantMenu = () => {
           <h3>{restaurant?.city}</h3>
           <h3>{restaurant?.avgRating} stars</h3>
           <h3>{restaurant?.costForTwoMsg}</h3>
+        </div>
+        <div>
+          <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}>Add Item</button>
         </div>
         <div className="m-5 p-5 shadow-lg bg-pink-50">
           <h1 className="font-bold">Menu</h1>

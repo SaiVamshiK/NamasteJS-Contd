@@ -25,7 +25,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="px-2">
-            <Link to='/cart'>Cart - 4 items</Link>
+            <Link to='/cart'>Cart - {cartItems.length} items</Link>
           </li>
           {/* <h2 className="font-bold p-2 m-2">{user.name}</h2> */}
           {/* {isLoggedIn ? (
