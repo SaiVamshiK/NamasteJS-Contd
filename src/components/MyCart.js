@@ -14,8 +14,6 @@ const MyCart = () => {
   const clearExistingCart = () => {
     dispatch(clearCart());
   }
-  console.log(cartItems)
-
   return (
     <div>
       <div className="flex">
