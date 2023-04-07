@@ -15,8 +15,8 @@ const RestaurantMenu = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddItem = () =>{
-    dispatch(addItem('Banana'));
+  const handleAddItem = (item) =>{
+    dispatch(addItem(item));
   }
 
   if (Object.keys(restaurant).length === 0) {
@@ -32,14 +32,13 @@ const RestaurantMenu = () => {
           <h3>{restaurant?.avgRating} stars</h3>
           <h3>{restaurant?.costForTwoMsg}</h3>
         </div>
-        <div>
-          <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}>Add Item</button>
-        </div>
         <div className="m-5 p-5 shadow-lg bg-pink-50">
           <h1 className="font-bold">Menu</h1>
           <ul>
             {menu?.itemCards?.map((item, x) => (
-              <li key={x}>{item.card.info.name}</li>
+              <div key={x}>
+                <li>{item.card.info.name} <button className="m-5 p-5 shadow-lg bg-green-50" onClick={() => handleAddItem(item.card.info.name)}>Add Item</button></li>
+              </div>
             ))}
           </ul>
         </div>
