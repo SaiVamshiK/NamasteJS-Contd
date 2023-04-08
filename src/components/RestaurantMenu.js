@@ -5,19 +5,24 @@ import ShimmerUI from "./ShimmerUI";
 import useRestaurant from "../utils/useRestaurant";
 import useMenu from "../utils/useMenu";
 import { addItem } from "../utils/CartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const RestaurantMenu = () => {
   const params = useParams();
   const { id } = params;
   let restaurant = useRestaurant(id);
   let menu = useMenu(id);
+  const cartItems = useSelector((store) => store.cart.items);
 
   const dispatch = useDispatch();
 
   const handleAddItem = (item) =>{
     dispatch(addItem(item));
   }
+
+  const countOccurrences = (item) => (cartItems.filter((i) => i.card.info.name === item).length);
+
+
 
   if (Object.keys(restaurant).length === 0) {
     return <ShimmerUI/>
@@ -37,7 +42,8 @@ const RestaurantMenu = () => {
           <ul>
             {menu?.itemCards?.map((item, x) => (
               <div key={x}>
-                <li>{item.card.info.name} <button className="m-5 p-5 shadow-lg bg-green-50" onClick={() => handleAddItem(item)}>Add Item</button></li>
+                {console.log(item)}
+                <li>{item.card.info.name} <button className="m-5 p-5 shadow-lg bg-green-50" onClick={() => handleAddItem(item)}>Add Item - {countOccurrences(item.card.info.name)}</button></li>
               </div>
             ))}
           </ul>
